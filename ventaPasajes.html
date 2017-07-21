@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reserva de Pasajes</title>
+    <link rel="stylesheet" href="Pasajes.css">
+    <style>
+      table {
+        width: auto;
+        height: 135px;
+      }
+    </style>
+  </head>
+  <body>
+  <center>
+    <h1>Reserve su asiento</h1>
+    <h3>Elija el número de asiento:</h3>
+    <table border="3" bordercolor="teal" cellspacing="12">
+     <tr>
+       <td>04</td>
+       <td>08</td>
+       <td>12</td>
+       <td>16</td>
+       <td>20</td>
+       <td>24</td>
+       <td>28</td>
+       <td>32</td>
+     </tr>
+     <tr>
+       <td>03</td>
+       <td>07</td>
+       <td>11</td>
+       <td>15</td>
+       <td>19</td>
+       <td>23</td>
+       <td>27</td>
+       <td>31</td>
+     </tr>
+     <tr></tr>
+     <tr>
+       <td>02</td>
+       <td>06</td>
+       <td>10</td>
+       <td>14</td>
+       <td>18</td>
+       <td>22</td>
+       <td>26</td>
+       <td>30</td>
+     </tr>
+     <tr>
+       <td>01</td>
+       <td>05</td>
+       <td>09</td>
+       <td>13</td>
+       <td>17</td>
+       <td>21</td>
+       <td>25</td>
+       <td>29</td>
+     </tr>
+   </table>
+   <div id = "mostrar"></div>
+   <form>
+   <h3>Buscar Asientos:</h3>
+   <p>
+     <label for="buscardni">Ingrese DNI:</label>
+     <input type="number" id="buscardni">
+     <button type="submit" onclick="buscar_dni()">Buscar</button>
+   </p>
+   <h3>Ingrese sus datos para realizar la reserva:</h3>
+    <p><label for="inputName"></label><input type="text" id="inputName" placeholder="Ingrese su Nombre" required></p>
+    <p><label for="inputSurname"></label><input type="text" id="inputSurname" placeholder="Ingrese sus Apellidos" required></p>
+    <p><label for="inputDni"></label><input type="number" id="inputDni" placeholder="Ingrese su DNI" required></p>
+    <button type="submit" onclick="mostrarReserva(); return false">Reservar</button>
+    <button type="submit" onclick="cancelar(); return false">Cancelar</button>
+    <p>
+      <button type="submit" onclick="muestraLista(); return false">Lista</button>
+    </p>
+    </form>
+    <div id= "muestra"></div>
+  </center>
+  <p><strong></strong></p>
+  <script src="venPasajes.js">
+  </script>
+  </body>
+</html>

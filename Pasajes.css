@@ -1,0 +1,16 @@
+* {
+  font-family: verdana;
+  font-weight: lighter;
+}
+body {
+  background-color: darkred;
+  color: white;
+}
+button {
+  width: 100px;
+  height: 40px;
+  background-color: silver;
+  border: none;
+  font-size: 1.2em;
+  color: maroon;
+}
