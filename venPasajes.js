@@ -20,12 +20,11 @@ function mostrarReserva (){
   var dni = document.getElementById("inputDni").value;
   var asiento = document.getElementById("mostrar").textContent;
   var mostrarDatos = document.getElementById("muestra");
-
-  pax[asiento]={
-  nombre:nombre,
-  apellidos:apellidos,
-  dni:dni
-  }
+    pax[asiento]={
+    nombre:nombre,
+    apellidos:apellidos,
+    dni:dni
+    }
   console.log(pax);
   mostrarDatos.innerHTML="<center><h3>Datos de la Reserva</h3><p><strong>Número de asiento: </strong>"+asiento+"</p><p><strong>Nombre del Pasajero: </strong>" +nombre+ ", " +apellidos+"</p><p><strong>DNI del pasajero: </strong>"+dni+"</p></center>"
   borrar();
@@ -39,18 +38,24 @@ function borrar(){
 function buscar_dni(){
   var busDni=document.getElementById("buscardni").value;
   for(var i = 1; i<=32;i++){
-    if(pax[i] != undefined && pax[i] == busDni){
+    if(pax[i] != undefined && pax[i].dni == busDni){
       document.getElementById("inputName").value = pax[i].nombre;
       document.getElementById("inputSurname").value = pax[i].apellidos;
       document.getElementById("inputDni").value = pax[i].dni;
     }
   }
-  console.log(buscar_dni());
 }
 
 function muestraLista(){
-  return pax;
+  for(var i = 1; i<=32;i++){
+    if(pax[i] != undefined){
+      var nombre=document.getElementById("inputName").value += pax[i].nombre;
+      var apellidos=document.getElementById("inputSurname").value += pax[i].apellidos;
+      var dni=document.getElementById("inputDni").value += pax[i].dni;
+    }
+  }
 }
-
+/*
 function cancelar(){
 }
+*/
