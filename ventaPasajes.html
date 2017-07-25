@@ -14,7 +14,7 @@
   <body>
   <center>
     <h1>Reserve su asiento</h1>
-    <h3>Elija el número de asiento:</h3>
+    <h3>1. Elija el número de asiento:</h3>
     <table border="3" bordercolor="teal" cellspacing="12">
      <tr>
        <td>04</td>
@@ -60,13 +60,14 @@
    </table>
    <div id = "mostrar"></div>
    <form>
-   <h3>Buscar Asientos:</h3>
+   <h3>Buscar Reserva:</h3>
    <p>
      <label for="buscardni">Ingrese DNI:</label>
      <input type="number" id="buscardni">
-     <button type="submit" onclick="buscar_dni()">Buscar</button>
+     <button type="submit" onclick="buscar()">Buscar</button>
+     <div id="muestraDNI"></div>
    </p>
-   <h3>Ingrese sus datos para realizar la reserva:</h3>
+   <h3>2. Ingrese sus datos para realizar la reserva:</h3>
     <p><label for="inputName"></label><input type="text" id="inputName" placeholder="Ingrese su Nombre" required></p>
     <p><label for="inputSurname"></label><input type="text" id="inputSurname" placeholder="Ingrese sus Apellidos" required></p>
     <p><label for="inputDni"></label><input type="number" id="inputDni" placeholder="Ingrese su DNI" required></p>
@@ -77,6 +78,8 @@
     </p>
     </form>
     <div id= "muestra"></div>
+    <div id="checklist"></div>
+    <div id="listar"></div>
   </center>
   <p><strong></strong></p>
   <script src="venPasajes.js">
